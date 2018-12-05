@@ -43,6 +43,7 @@ function getWriterOpts () {
         commit.type = `Reverts`
       } else if (commit.type === `build` && commit.scope === `deps`) {
         commit.type = `Dependency Updates`
+        commit.scope = ``
       } else if (discard) {
         return
       } else if (commit.type === `docs`) {
